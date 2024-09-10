@@ -11,17 +11,32 @@
             color: #f6f6f6;
             background-color: #030045;
         }
-        
+        .center-me {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
         .todo {
             color: #ffc200;
         }
-        
+
         #hello-slap {
             background-color: #0043CE;
             border: silver 1px solid;
             padding: 10px;
             width: 320px;
             height: 200px;
+            display: flex;
+            justify-content: flex-start; /* Align content to the start horizontally */
+            align-items: flex-start; /* Align content to the start vertically */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
         }
     </style>
 </head>
@@ -35,8 +50,8 @@
         <p>I need you to center the box but not its content horizontally and vertically regardless of the browser and window resolution.</p>
     </div>
 
-    <div id="hello-slap">
-        Hey fellas! I feel so unaligned! :/
+    <div id="hello-slap" class="center-me">
+        Hey guys! I am centered now. Allways.
     </div>
 
 </body>

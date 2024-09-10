@@ -15,11 +15,21 @@ function pushToOutput(value) {
     document.getElementById("output").innerText += value;
 }
 
+function calculateExpression(expression) {
+    try {
+        // Use the Function constructor to evaluate the expression
+        let result = new Function('return ' + expression)();
+        return result;
+    } catch (error) {
+        return 'Invalid expression';
+    }
+}
 function calculate() {
     var output = document.getElementById("output");
-    output.innerText = "Not Implemented";
+    output.innerText = calculateExpression(output.innerText);
 }
 
 function reset() {
     document.getElementById("output").innerText = "";
 }
+

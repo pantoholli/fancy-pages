@@ -14,8 +14,8 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
     margin-top: -100px;
     margin-left: -100px;
     border-radius: 2px;
@@ -77,4 +77,26 @@ body {
 #box .btm {
     transform: rotateX(90deg) translateZ(-201px) translateY(-101px);
     background: #bbb;
+}
+
+@keyframes rotateDice {
+    from {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+
+    to {
+        transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+    }
+}
+
+#box {
+    animation: rotateDice 5s infinite linear;
+}
+
+.ilcssBox {
+    border: silver 1px solid;
+    width: 50px;
+    height: 50px;
+    text-align: left;
+
 }
